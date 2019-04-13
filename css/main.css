@@ -1,0 +1,234 @@
+#product-overview {
+    /*background-image: url("../images/freedom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left 10% top 20%;*/
+    background: linear-gradient(to bottom, rgba(255, 127, 36, 0.5) 20%, transparent 50%),
+                linear-gradient(to top, rgba(20, 20, 20, 0.1) 10%, transparent 30%),
+                url("../images/freedom.jpg") top 20% center/cover no-repeat;
+    width: 100vw;
+    max-width: 100%;
+    height: 35vh;
+    position: relative;
+}
+
+#product-overview h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: "DejaVu Serif", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    font-size: 1.6rem;
+}
+
+@media (min-width: 40rem) and (min-height: 50rem) {
+    #product-overview {
+        height: 40vh;
+    }
+
+    #product-overview h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+}
+
+.plan {
+    background-color: #d5ffdc;
+    text-align: center;    /* 作用于所有行内元素 */
+    padding: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.plan--highlighted {
+    background-color: #19b84c;
+    color: white;
+}
+
+.plan__annotation {
+    background-color: white;
+    color: #0e4f1f;
+    padding: 0.5rem 0.2rem;
+    box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: #858585;
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
+
+.plan--highlighted .plan__price {
+    color: #0e4f1f;
+}
+
+.plan__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan__features > li {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 40rem) {
+    .plan {
+        width: 30%;
+        min-width: 12.5rem;
+        max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 28rem;
+    }
+
+    .plan__list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plan--highlighted {
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        height: 30rem;
+        z-index: 20;
+    }
+}
+
+
+#key-features {
+    background-color: #ff1b68;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 2rem;
+}
+
+.key-feature__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: auto;
+    padding: 1.25rem;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.25rem;
+}
+
+@media (min-width: 40rem) {
+    .key-feature {
+        width: 30%;
+        max-width: 25rem;
+    }
+
+    .key-feature__list {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.modal {
+    position: fixed;
+    z-index: 200;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(-3rem) scale(0.5);
+    transition: opacity 0.4s cubic-bezier(.28,.71,1,.19), transform 400ms cubic-bezier(.28,.71,1,.19);
+    /* display: none; */
+}
+
+.modal__title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+    text-align: center;
+}
+
+.modal__action {
+    border: 1px solid #0e4f1f;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+    background: red;
+    border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+    background: #ff5454;
+    border-color: #ff5454;
+}
+
+@media (max-width: 40rem) {
+    .modal {
+        top: 35%;
+        left: 20%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 30rem) {
+    .modal {
+        top: 35%;
+        left: 10%;
+        width: 80%;
+    }
+
+    .modal__title {
+        font-size: 1.2rem;
+    }
+}
